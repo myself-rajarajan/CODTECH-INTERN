@@ -1,0 +1,14 @@
+[2025-03-07 20:17:04] 
+===== Starting Scan: http://testphp.vulnweb.com =====
+[2025-03-07 20:17:05] [+] Successfully connected to http://testphp.vulnweb.com
+[2025-03-07 20:17:05] [+] Found 1 forms on the page.
+[2025-03-07 20:17:05] [!] Error testing XSS in http://testphp.vulnweb.comsearch.php?test=query: HTTPConnectionPool(host='testphp.vulnweb.comsearch.php', port=80): Max retries exceeded with url: /?test=query (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001E95290AAD0>: Failed to resolve 'testphp.vulnweb.comsearch.php' ([Errno 11001] getaddrinfo failed)"))
+[2025-03-07 20:17:05] [!] Possible SQL Injection detected at http://testphp.vulnweb.com?id='
+[2025-03-07 20:17:06] [!] Possible SQL Injection detected at http://testphp.vulnweb.com?id=' OR '1'='1
+[2025-03-07 20:17:06] [!] Possible SQL Injection detected at http://testphp.vulnweb.com?id='; DROP TABLE users --
+[2025-03-07 20:17:06] [!] Missing security header: X-Frame-Options
+[2025-03-07 20:17:06] [!] Missing security header: Content-Security-Policy
+[2025-03-07 20:17:06] [!] Missing security header: X-XSS-Protection
+[2025-03-07 20:17:06] [!] Missing security header: X-Content-Type-Options
+[2025-03-07 20:17:06] ===== Scan Complete! Results saved to scan_results.txt =====
+
