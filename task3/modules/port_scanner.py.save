@@ -1,0 +1,13 @@
+import socket
+
+def scan_ports(target, ports):
+    print(f"[+] Scanning {target}")
+    for port in ports:
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.settimeout(1)
+                result = s.connect_ex((target, port))
+                if result == 0:
+                    print(f"Port {port}: OPEN")
+        except Exception as e:
+            print(f"Error scanning port {port}: {e}")
